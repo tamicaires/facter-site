@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import type React from "react";
 import { Navbar } from "./page";
+import { Analytics } from "@vercel/analytics/react";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${plusJakartaSans.variable} font-sans`}>
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );
